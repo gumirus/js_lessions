@@ -1,30 +1,36 @@
-//  1. Типы данных в JavaScript имеет 8 основных типов данных:
+// 1. Типы данных в JavaScript имеет 8 основных типов данных:
 // Примитивные типы:
 // 1. string
 const name = 'Руслан' // string Строка: name - это строка, представляющая имя человека.
 let name2 = 'Руслан'
 console.log(typeof name2) // "string"
+
 // 2. number
 const yearBirth = 1982 // number Число: yearBirth - это число, представляющее год рождения.
 let age = 25
 console.log(typeof age) // "number"
+
 // 3. Boolean
 const isStudent = true // Example of a boolean value
 let isStudent2 = true
 console.log(typeof isStudent2) // "boolean"
+
 // 4. BigInt
 const largeNumber = 1234567890123456789012345678901234567890n // Example of a BigInt
 let bigNumber = 123456789012345678901234567890n
 console.log(typeof bigNumber) // "bigint"
+
 // 5. Null
 const emptyValue = null // Example of a null value
 let emptyValue2 = null
-console.log(typeof emptyValue2) // "object" (это ошибка в JS)
+console.log(typeof emptyValue2) // "object" (это особенность JS)
+
 // 6. Undefined
 let uninitializedVariable // Example of an undefined value
 let uninitialized
 console.log(typeof uninitialized) // "undefined"
-// 6. Symbol
+
+// 7. Symbol
 const uniqueId = Symbol('id') // Example of a Symbol
 let uniqueId2 = Symbol('id')
 console.log(typeof uniqueId2) // "symbol"
@@ -39,11 +45,11 @@ const personalInfo = {
   emptyValue: null, // null: emptyValue имеет значение null, указывающее на преднамеренное отсутствие значения.
   uninitializedVariable: undefined, // undefined: uninitializedVariable имеет значение undefined, представляющее переменную, которая была объявлена, но ей не присвоено значение.
   uniqueId: Symbol('id'), // Symbol: UniqueID - это значение символа, которое является уникальным и неизменяемым.
-  largeNumber: 1234567890123456789012345678901234567890n, // number BigInt: largeNumber - это значение BigInt, представляющее очень большое целое число.
+  largeNumber: 1234567890123456789012345678901234567890n, // BigInt: largeNumber - это значение BigInt, представляющее очень большое целое число.
   hobbies: ['reading', 'coding'], // Array: hobbies - это массив, содержащий хобби человека
 }
 
-// Object-arrey Массив - это упорядоченная коллекция значений let numbers = [1, 2, 3, 4, 5]; console.log(numbers[0]); // 1
+// Object-array Массив - это упорядоченная коллекция значений let numbers = [1, 2, 3, 4, 5]; console.log(numbers[0]); // 1
 const personals = [
   {
     name: 'Руслан',
@@ -55,7 +61,7 @@ const personals = [
     name: 'Владилен',
     yearBirth: 1992,
     isStudent: false,
-    hobbies: ['bloger', 'traveling', 'hiking'],
+    hobbies: ['blogger', 'traveling', 'hiking'],
   },
 ]
 
@@ -78,9 +84,9 @@ console.log('BigInt:', largeNumber)
 console.log('Null:', emptyValue)
 console.log('Undefined:', uninitializedVariable)
 console.log('Object:', personalInfo)
-console.log('Arreys:', personals)
-console.log('Arrey:', personalInfoArray[0]) // Доступ к объекту в массиве
-console.log('Arrey:', personalInfoArray[0].name) // Доступ к свойству объекта в массиве
+console.log('Arrays:', personals)
+console.log('Array:', personalInfoArray[0]) // Доступ к объекту в массиве
+console.log('Array:', personalInfoArray[0].name) // Доступ к свойству объекта в массиве
 console.log('Symbol:', uniqueId)
 
 // 2. Логические операторы
@@ -148,11 +154,11 @@ function myBind(func, context) {
   }
 }
 const user4 = { name: 'Руслан' }
-function greet() {
+function greetUser() {
   console.log(`Привет, ${this.name}`)
 }
-const boundGreet1 = myBind(greet, user4)
-boundGreet() // "Привет, Руслан"
+const boundGreet1 = myBind(greetUser, user4)
+boundGreet1() // "Привет, Руслан"
 
 // Задача 2: Реализация debounce
 function debounce(func, delay) {
@@ -162,3 +168,7 @@ function debounce(func, delay) {
     timeout = setTimeout(() => func.apply(this, args), delay)
   }
 }
+
+// Пример использования debounce
+const debouncedGreet = debounce(() => console.log('Debounced greeting!'), 1000)
+debouncedGreet() // Вызов функции с задержкой
