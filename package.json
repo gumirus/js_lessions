@@ -1,0 +1,31 @@
+{
+  "name": "lessions",
+  "version": "1.0.0",
+  "main": "work.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gumirus/js_lessions.git"
+  },
+  "author": "Ruslan Gumirov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gumirus/js_lessions/issues"
+  },
+  "homepage": "https://github.com/gumirus/js_lessions#readme",
+  "description": "Проект для изучения JavaScript.",
+  "keywords": [
+    "JavaScript",
+    "уроки",
+    "ESLint"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.15.0"
+  }
+}
