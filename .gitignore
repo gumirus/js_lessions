@@ -1,0 +1,10 @@
+# Игнорируем файлы, создаваемые macOS  
+.DS_Store  
+.AppleDouble  
+.LSOverride  
+
+# Игнорируем файлы обмена  
+*~  
+
+# Игнорируем файлы .localized  
+*.localized
